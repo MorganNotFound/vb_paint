@@ -721,14 +721,57 @@ Private Sub Label7_Click()
 Label6.BackColor = Line1.BorderColor
 End Sub
 Private Sub Text1_Change()
+If Text1.Text = "" Then
+Text1.Text = 0
+End If
+If Text1.Text > 255 Then
+Text1.Text = 255
+End If
 HScroll1.Value = Text1.Text
 End Sub
+Private Sub Text1_KeyPress(KeyAscii As Integer)
+If KeyAscii = 8 Then Exit Sub
+If KeyAscii < 48 Or KeyAscii > 57 Then KeyAscii = 0
+End Sub
 Private Sub Text2_Change()
+If Text2.Text = "" Then
+Text2.Text = 0
+End If
+If Text2.Text > 255 Then
+Text2.Text = 255
+End If
 HScroll2.Value = Text2.Text
 End Sub
+Private Sub Text2_KeyPress(KeyAscii As Integer)
+If KeyAscii = 8 Then Exit Sub
+If KeyAscii < 48 Or KeyAscii > 57 Then KeyAscii = 0
+End Sub
 Private Sub Text3_Change()
+If Text3.Text = "" Then
+Text3.Text = 0
+End If
+If Text3.Text > 255 Then
+Text3.Text = 255
+End If
 HScroll3.Value = Text3.Text
 End Sub
+Private Sub Text3_KeyPress(KeyAscii As Integer)
+If KeyAscii = 8 Then Exit Sub
+If KeyAscii < 48 Or KeyAscii > 57 Then KeyAscii = 0
+End Sub
 Private Sub Text4_Change()
+If Text4 = "" Then
+Text4.Text = 1
+End If
+If Text4.Text = 0 Then
+Text4.Text = 1
+End If
+If Text4.Text > 20 Then
+Text4.Text = 20
+End If
 HScroll4.Value = Text4.Text
+End Sub
+Private Sub Text4_KeyPress(KeyAscii As Integer)
+If KeyAscii = 8 Then Exit Sub
+If KeyAscii < 48 Or KeyAscii > 57 Then KeyAscii = 0
 End Sub
