@@ -657,6 +657,17 @@ Begin VB.Form Form1
       Top             =   120
       Width           =   1215
    End
+   Begin VB.PictureBox Picture1 
+      BorderStyle     =   0  'None
+      Height          =   8055
+      Left            =   0
+      ScaleHeight     =   8055
+      ScaleWidth      =   14655
+      TabIndex        =   68
+      Top             =   0
+      Visible         =   0   'False
+      Width           =   14655
+   End
    Begin VB.Image Image1 
       Height          =   495
       Left            =   0
