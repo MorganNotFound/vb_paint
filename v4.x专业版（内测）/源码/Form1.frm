@@ -4,12 +4,13 @@ Begin VB.Form Form1
    Caption         =   "Paint by Morgan Copyright (c) 2022"
    ClientHeight    =   8085
    ClientLeft      =   225
-   ClientTop       =   855
+   ClientTop       =   555
    ClientWidth     =   14670
+   Icon            =   "Form1.frx":0000
    LinkTopic       =   "Form1"
    ScaleHeight     =   8085
    ScaleWidth      =   14670
-   StartUpPosition =   3  '窗口缺省
+   StartUpPosition =   2  '屏幕中心
    Begin MSComDlg.CommonDialog comDlg 
       Left            =   6720
       Top             =   0
@@ -658,6 +659,7 @@ Begin VB.Form Form1
       Width           =   1215
    End
    Begin VB.PictureBox Picture1 
+      AutoSize        =   -1  'True
       BorderStyle     =   0  'None
       Height          =   8055
       Left            =   0
@@ -667,12 +669,12 @@ Begin VB.Form Form1
       Top             =   0
       Visible         =   0   'False
       Width           =   14655
-   End
-   Begin VB.Image Image1 
-      Height          =   495
-      Left            =   0
-      Top             =   0
-      Width           =   1215
+      Begin VB.Image Image1 
+         Height          =   495
+         Left            =   0
+         Top             =   360
+         Width           =   1215
+      End
    End
    Begin VB.Label Label8 
       Caption         =   "半径："
@@ -734,11 +736,14 @@ Begin VB.Form Form1
    Begin VB.Menu Help1 
       Caption         =   "帮助(&H)"
       Begin VB.Menu Hl1 
-         Caption         =   "索引"
+         Caption         =   "索引(&I)"
          Enabled         =   0   'False
       End
       Begin VB.Menu Hl2 
-         Caption         =   "更新"
+         Caption         =   "更新(&R)"
+      End
+      Begin VB.Menu Hl3 
+         Caption         =   "关于(&A)"
       End
    End
 End
@@ -822,6 +827,9 @@ End If
 End Sub
 Private Sub Hl2_Click()
 Shell "explorer https://github.com/MorganNotFound/vb_paint/"
+End Sub
+Private Sub Hl3_Click()
+frmAbout.Show
 End Sub
 Private Sub HS1_Click()
 HS1.Visible = False
